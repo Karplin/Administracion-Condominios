@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B92B283D-F6FE-4C59-92C7-99B6DCF698A7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROYECTOFINAL</RootNamespace>
+    <AssemblyName>PROYECTOFINAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abstracto.cs" />
+    <Compile Include="apartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apartamentos.Designer.cs">
+      <DependentUpon>apartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="condomines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="condomines.Designer.cs">
+      <DependentUpon>condomines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="condominesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>condominesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="condominesDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>condominesDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="consultaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaciones.Designer.cs">
+      <DependentUpon>consultaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultaedificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaedificio.Designer.cs">
+      <DependentUpon>consultaedificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultamines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultamines.Designer.cs">
+      <DependentUpon>consultamines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultapago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultapago.Designer.cs">
+      <DependentUpon>consultapago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultar.Designer.cs">
+      <DependentUpon>consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultazana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultazana.Designer.cs">
+      <DependentUpon>consultazana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crearcuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crearcuenta.Designer.cs">
+      <DependentUpon>crearcuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuota.Designer.cs">
+      <DependentUpon>cuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edificios.Designer.cs">
+      <DependentUpon>edificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formucondomines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formucondomines.Designer.cs">
+      <DependentUpon>formucondomines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="general.Designer.cs">
+      <DependentUpon>general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manzanas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manzanas.Designer.cs">
+      <DependentUpon>manzanas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reclamaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reclamaciones.Designer.cs">
+      <DependentUpon>reclamaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportecondomines.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportecondomines.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportecondominesx2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportecondominesx2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportecondominesx3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportecondominesx3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportecondominesx4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportecondominesx4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportedificio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportedificio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportedificio2x.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportedificio2x.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportedificio3x.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportedificio3x.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportedificio4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportedificio4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportemanzana.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportemanzana.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportemanzana2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportemanzana2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportepago.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportepago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportepago2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportepago2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportereclamaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportereclamaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportereclamaciones2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportereclamaciones2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="virtuales.cs" />
+    <Compile Include="zcrudapartamento.cs" />
+    <Compile Include="zcrudcondomines.cs" />
+    <Compile Include="zcrudedificio.cs" />
+    <Compile Include="zcrudmanzana.cs" />
+    <Compile Include="zreportedificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zreportedificio.Designer.cs">
+      <DependentUpon>zreportedificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zreportemanzana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zreportemanzana.Designer.cs">
+      <DependentUpon>zreportemanzana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zreportemines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zreportemines.Designer.cs">
+      <DependentUpon>zreportemines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zreportepago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zreportepago.Designer.cs">
+      <DependentUpon>zreportepago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zreportereclamaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zreportereclamaciones.Designer.cs">
+      <DependentUpon>zreportereclamaciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="apartamentos.resx">
+      <DependentUpon>apartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="condomines.resx">
+      <DependentUpon>condomines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaciones.resx">
+      <DependentUpon>consultaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaedificio.resx">
+      <DependentUpon>consultaedificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultamines.resx">
+      <DependentUpon>consultamines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultapago.resx">
+      <DependentUpon>consultapago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultar.resx">
+      <DependentUpon>consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultazana.resx">
+      <DependentUpon>consultazana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crearcuenta.resx">
+      <DependentUpon>crearcuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuota.resx">
+      <DependentUpon>cuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edificios.resx">
+      <DependentUpon>edificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formucondomines.resx">
+      <DependentUpon>formucondomines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="general.resx">
+      <DependentUpon>general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manzanas.resx">
+      <DependentUpon>manzanas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reclamaciones.resx">
+      <DependentUpon>reclamaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportecondomines.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportecondomines.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportecondominesx2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportecondominesx2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportecondominesx3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportecondominesx3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportecondominesx4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportecondominesx4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportedificio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportedificio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportedificio2x.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportedificio2x.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportedificio3x.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportedificio3x.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportedificio4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportedificio4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportemanzana.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportemanzana.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportemanzana2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportemanzana2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportepago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportepago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportepago2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportepago2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportereclamaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportereclamaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportereclamaciones2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportereclamaciones2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zreportedificio.resx">
+      <DependentUpon>zreportedificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zreportemanzana.resx">
+      <DependentUpon>zreportemanzana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zreportemines.resx">
+      <DependentUpon>zreportemines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zreportepago.resx">
+      <DependentUpon>zreportepago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zreportereclamaciones.resx">
+      <DependentUpon>zreportereclamaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="condominesDataSet.xsc">
+      <DependentUpon>condominesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="condominesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>condominesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="condominesDataSet.xss">
+      <DependentUpon>condominesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="condominesDataSet1.xsc">
+      <DependentUpon>condominesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="condominesDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>condominesDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="condominesDataSet1.xss">
+      <DependentUpon>condominesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59069190-residencial-dibujo-icono-de-la-construcción-del-vector-aislado-en-el-fondo-dibujado-a-mano-icono-de-la-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7-78730_icono-de-crear-cuenta-png-clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_22605721-stock-illustration-the-high-buildings-and-the.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mantenimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curso-planeamiento-y-programacion-del-mantenimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two-businessman-consult-at-office-desk-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ly-368wr_400x400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5eb2862c5beaf905593c3cceb75c5953.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
